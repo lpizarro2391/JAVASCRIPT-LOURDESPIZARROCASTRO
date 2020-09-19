@@ -1,7 +1,7 @@
 var mdCalculadora =(function (document,undefined){
     var error_op = "La operacion solicitada no existe";
     var newVal = false,
-        maxLen = 9,
+        maxLen = 8,
         nOp1 = 0,
         nOp2 = 0,
         hasPoint = false;
@@ -24,7 +24,7 @@ var domBtns;
 
 function initVars(){
     newVal = false;
-    maxLen = 9;
+    maxLen = 8;
     nOp1 = 0;
     nOp2 = 0;
     result = 0;
@@ -107,13 +107,13 @@ function solveOp(){
         screnVal = String(result);
         nOp1 = result;
     }
-    if(screenVal.search(".") == -1) maxLen = 9;
+    if(screenVal.search(".") == -1) maxLen = 8;
     else maxLen = 10;
     newVal = true;
     writeDisplay(screnVal);
     hasPoint = false;
     idBOp = "";
-    maxLen = 9;
+    maxLen = 8;
 }
 
 function setSign(){
